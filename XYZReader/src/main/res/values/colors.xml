@@ -18,9 +18,10 @@
 <resources>
     <color name="photo_placeholder">#ccc</color>
 
-    <color name="colorprimary">#AF9800</color>
-    <color name="colorprimary_dark">#A57C00</color>
-    <color name="coloraccent">#FFAB40</color>
+    <color name="colorprimary">#DF9800</color>
+    <color name="colorprimary_dark">#D57C00</color>
+    <color name="coloraccent">#DFAB40</color>
+    <color name="coloraccent_dark">#DAAB40</color>
 
     <color name="darkgray">#323232</color>
     <color name="lightgray">#dddddd</color>
