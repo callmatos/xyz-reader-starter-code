@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:fitsSystemWindows="true"
+    android:elevation="@dimen/appbar_elevation_article"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:expandedTitleMarginStart="38dp"
+        app:expandedTitleMarginEnd="54dp"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <FrameLayout
+            android:id="@+id/photo_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_collapseMode="pin">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/photo_background_protection" />
+
+            <LinearLayout
+                android:id="@+id/meta_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/detail_metabar_vert_padding"
+                android:paddingLeft="@dimen/detail_inner_horiz_margin"
+                android:paddingRight="@dimen/detail_inner_horiz_margin"
+                android:paddingTop="@dimen/detail_metabar_vert_padding">
+
+                <TextView
+                    android:id="@+id/article_title"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:lineSpacingMultiplier="0.9"
+                    android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/detail_title_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/article_byline"
+                    style="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8fff" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.CollapsingToolbarLayout>
+</android.support.design.widget.AppBarLayout>
